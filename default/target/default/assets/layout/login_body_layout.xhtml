@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xml:lang="pt" lang="pt-br">
+	
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		
+		<title>
+			<ui:insert name="titulo">
+				<h:outputText value="#{msg['projeto.nome']}"/>
+			</ui:insert>
+		</title>
+		
+		<link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/themes/aristo/skin.css" />
+		
+		<style type="text/css">
+			.ui-layout-north {
+				z-index: 20 !important;
+				overflow: visible !important;
+			}
+			
+			.ui-layout-north .ui-layout-unit-content {
+				overflow: visible !important;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			<!--
+				
+			//-->
+		</script>
+	</h:head>
+	
+	<h:body>
+		
+		<p:layout fullPage="true">
+			<p:layoutUnit position="north" size="100" resizable="false" closable="false" collapsible="false"
+				rendered="true" collapsed="false">
+				<ui:include src="geral_header_layout.xhtml"/>
+			</p:layoutUnit>
+			
+			<p:layoutUnit position="south" size="100" resizable="false" closable="false" collapsible="false"
+				rendered="true" collapsed="false">
+				<ui:include src="geral_footer_layout.xhtml"/>
+			</p:layoutUnit>
+			
+			<p:layoutUnit position="center">
+				<ui:insert name="conteudo"/>
+			</p:layoutUnit>
+		</p:layout>
+		
+	</h:body>
+	
+</html>
