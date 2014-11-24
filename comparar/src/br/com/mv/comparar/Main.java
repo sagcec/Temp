@@ -11,6 +11,8 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		//
+
 		try {
 			File f = new File("csv1.csv");
 
@@ -39,7 +41,7 @@ public class Main {
 
 					s1[1] = Normalizer.normalize(s1[1], Normalizer.Form.NFD);
 					s1[1] = s1[1].replaceAll("[^\\p{ASCII}]", "");
-					
+
 					//s1[1] = s1[1].substring(0, s1[1].indexOf(" ("));
 
 					if (s[1].equals(s1[1])) {
